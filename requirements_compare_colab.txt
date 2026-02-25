@@ -1,0 +1,6 @@
+﻿google-genai>=0.8.0
+requests>=2.31.0
+transformers>=4.44.0
+accelerate>=0.33.0
+bitsandbytes>=0.43.0
+torch>=2.2.0

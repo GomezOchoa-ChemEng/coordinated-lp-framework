@@ -70,3 +70,26 @@ out = run_dispatch_lp_framework(problem_text, gemini_model="gemini-1.5-pro", use
 ## Notes
 - Negative bids are supported when `settings.allow_negative_bids = true`.
 - If duals are unavailable in the active solver runtime, the framework still returns valid primal allocations and analysis.
+
+## Colab LLM Comparison Scripts
+Use these scripts to compare low-cost providers for the same LP extraction prompt:
+- `compare_gemini_flash_lite.py` (Gemini `gemini-2.5-flash-lite`)
+- `compare_deepseek_chat.py` (DeepSeek `deepseek-chat`)
+- `compare_open_source_qwen.py` (Open-source `Qwen/Qwen2.5-7B-Instruct`, with GPU 4-bit when possible)
+
+### Colab setup
+```bash
+pip install -r requirements_compare_colab.txt
+```
+
+### Run examples
+```bash
+python compare_gemini_flash_lite.py
+python compare_deepseek_chat.py
+python compare_open_source_qwen.py
+```
+
+### Keys
+Set only the key you need for each provider:
+- `GEMINI_API_KEY`
+- `DEEPSEEK_API_KEY`
